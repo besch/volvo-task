@@ -1,0 +1,30 @@
+<h1>New contact</h1>
+
+<form name="form" novalidate>
+    <div class="form-group">
+        <div class="col-lg-6">
+            <input name="first" class="form-control" ng-model="new.first" placeholder="First name" required>
+            <span class="text-danger" ng-show="form.first.$error.required">This field is required.</span>
+        </div>
+
+        <div class="col-lg-6">
+            <input name="last" class="form-control" ng-model="new.last" placeholder="Last name" required>
+            <span class="text-danger" ng-show="form.last.$error.required">This field is required.</span>
+        </div>
+
+        <div class="col-lg-6">
+            <input name="email" type="email" class="form-control" ng-model="new.email" placeholder="Email" required check-email>
+            <span class="text-danger" ng-show="form.email.$error.required">This field is required.</span>
+            <span class="text-danger" ng-show="form.email.$error.email">Not valid email</span>
+        </div>
+
+        <div class="col-lg-6">
+            <select name="country" class="form-control" ng-model="new.country" pvp-country-picker required></select>
+            <span class="text-danger" ng-show="form.country.$error.required">This field is required.</span>
+        </div>
+    </div>
+    <div class="btn-group">
+        <button class="btn btn-success" ng-click="contactCreate()">Create contact</button>
+        <button class="btn btn-danger" ng-click="cancelContact()">Cancel</button>
+    </div>
+</form>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body ng-app="crud">
+
+<div ng-controller="contactsCtrl">
+    <div ng-view></div>
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+<script src="bower_components/angular-country-picker/country-picker.js"></script>
+
+<script src="app.js"></script>
+<script src="js/storageService.js"></script>
+<script src="js/emailCheckDirective.js"></script>
+<script src="js/contactsController.js"></script>
+<script src="js/editController.js"></script>
+
+</body>
+</html>

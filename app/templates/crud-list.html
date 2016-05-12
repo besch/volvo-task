@@ -1,0 +1,25 @@
+<h1>Contact list</h1>
+
+<p ng-if="!contacts">Contact list is empty</p>
+
+<table ng-if="contacts" class="table table-hover">
+  <tr>
+    <th>Id</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Country</th>
+  </tr>
+  <tr ng-if="contacts" ng-repeat="contact in contacts">
+    <td>{{$index}}</td>
+    <td>{{contact.first}}</td>
+    <td>{{contact.last}}</td>
+    <td>{{contact.email}}</td>
+    <td>{{contact.country}}</td>
+    <td><a ng-href="#/contact/{{$index}}/edit">Edit</a></td>
+    <td><a href="" ng-click="contactDelete($index)">Delete</a></td>
+  </tr>
+</table>
+
+<a class="btn btn-success" href="#/contact/new">Create new contact</a>
+<a class="btn btn-danger" href="" ng-click="deleteAll()">Delete all</a>
